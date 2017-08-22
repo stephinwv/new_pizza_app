@@ -1,0 +1,22 @@
+<!DOCtype html>
+<html>
+<center>
+<header>
+	<h1>Thank you for confirming your order.</h1>
+</header>
+
+<body>
+<form method= "post" action = "/results">
+
+	<%toppings.each do|value|%>
+	
+<p>Your order of a sandwich with <%=value%> will be ready in 10 minutes.</p>
+
+	<br>
+	<%end%>
+</form>
+
+
+</center>
+</body>
+</html>

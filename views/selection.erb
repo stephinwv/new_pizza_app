@@ -9,18 +9,33 @@
  <header>
     <h1> Here is your order for confirmation </h1>
     <h3> Pizza with these toppings:</h3>
-    <h3> If you have changed your mind, unclick the boxes next to the item you would no longer like to keep before hitting submit below.</h3>
+    
  </header>
-<body>
-<form method = "post" action = "/order">
-<% toppings.each do |value| %>
 
-<p><input  type="checkbox"  value= "<%= value %>" name= "toppings[]"><%= value %><br> </p>
+<body>
+
+<form method = "post" action = "/selection">
+<% meats.each do |mv| %>
+
+<p><input  type="radio"  value= "<%=mv%>" name= "toppings[]">yes<br><%=mv%> </p>
+<p><input  type="radio"  value= "#" name= "toppings[]"><br>no</p>
+<%end%>
+<% cheese.each do |cv| %>
+
+<p><input  type="radio"  value= "<%=cv%>" name= "toppings[]">yes<br><%=cv%> </p>
+<p><input  type="radio"  value= "#" name= "toppings[]">no<br> </p>
+<%end%>
+<% veggies.each do |vv| %>
+
+<p><input  type="radio"  value= "<%=vv%>" name= "toppings[]">yes<br><%=vv%> </p>
+<p><input  type="radio"  value= "no" name= "toppings[]">no<br> </p>
 <%end%>
 
-
-
- <input type="submit" name="confirm" value="confirm">
+<% sauce.each do |sv|%>
+<p><input  type="radio"  value= "<%=sv%>" name= "toppings[]">yes<br><%=sv%> </p>
+<p><input  type="radio"  value= "no" name= "toppings[]">no<br> </p>
+<%end%>
+<input type="submit" name="confirm" value="confirm">
 </form>
 </center>
 </body>
