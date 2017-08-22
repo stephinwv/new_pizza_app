@@ -3,6 +3,28 @@
 <center>
 <h1>Please pick your pizz toppings:</h1>
 
+<!DOCtype html>
+<html>
+<center>
+ <header>
+    <h1> Here is your order for confirmation </h1>
+    <h3> Pizza with these toppings:</h3>
+    <h3> If you have changed your mind, unclick the boxes next to the item you would no longer like to keep before hitting submit below.</h3>
+ </header>
+<body>
+<form method = "post" action = "/order">
+<% toppings.each do |value| %>
+
+<p><input  type="checkbox"  value= "<%= value %>" name= "toppings[]"><%= value %><br> </p>
+<%end%>
+
+
+
+ <input type="submit" name="confirm" value="confirm">
+</form>
+</center>
+</body>
+</html>
 
 
 
