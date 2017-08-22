@@ -1,9 +1,10 @@
-require "Sinatra"
+require "sinatra"
 
 get '/' do
-	erb index:
+	erb :index
 end
 post '/selection' do
+	
 end
 
 	
