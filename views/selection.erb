@@ -5,36 +5,38 @@
     <h1> Here is your order for confirmation </h1>
     <h3> Pizza with these toppings:</h3>
     
- <script type="text/javascript">
+ </header>
 
-</script>
 <body>
+
 
 <form method = "post" action = "/selection">
 <% meats.each do |mv| %>
-
-<p> <%=mv%> <input type="radio"  value= "1" id= yes name= "meats[]" multiple: true/>yes
-<input  type="radio"  value= "0" id= "no" name= "meats[]" multiple: false />no</p>
+<%=mv%>
+	<input type = "radio" name = "meats_radio[<%= mv %>]" value = "meats_value" checked> Yes
+    <input type = "radio" name = "meats_radio[<%= mv %>]" value = "meats_value"> No </p>
 <%end%>
 <% cheese.each do |cv| %>
-
-<p><%=cv%> <input  type="radio"  value="1" id= "yes " name= "cheese[]" multiple: true />yes
-<input  type="radio"  value= "0" id="no" name= "cheese[]" multiple:false />no</p>
+<%=cv%>
+	<input type = "radio" name = "cheese_radio[<%= cv %>]" value = "cheese_value" checked> Yes
+    <input type = "radio" name = "cheese_radio[<%= cv %>]" value = "cheese_value"> No </p>
 <%end%>
 <% veggies.each do |vv| %>
-
-<p><%=vv%><input  type="radio"  value= "1" id= "yes" name= "veggies[]" multiple: true/>yes 
-<input  type="radio"  value= "0" id= "no" name= "veggies[]" multiple: false/ >no</p>
+<%=vv%>
+	<input type = "radio" name = "vegg_radio[<%= vv %>]" value = "vv" checked> Yes
+    <input type = "radio" name = "vegg_radio[<%= vv %>]" value = "vv"> No </p>
 <%end%>
 
 <% sauce.each do |sv|%>
-<p><%=sv%><input  type="radio"  value= "1" id= "yes" name= "sauce[]" multiple: true/>yes 
 
-<input  type="radio"  value= "0" id= "no" name= "sauce[]" multiple: false/ ></p>
+	<input type = "radio" name = "sauce_radio[<%= sv %>]" value = "sv" checked> Yes
+    <input type = "radio" name = "sauce_radio[<%= sv %>]" value = "sv"> No </p>
 <%end%>
-<input type="submit" name="confirm" value="confirm"/>
+<input type="submit" name="confirm" value="confirm">
 </form>
 </center>
 </body>
-</html>
+
+
+
 

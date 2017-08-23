@@ -19,17 +19,14 @@ get '/selection' do
 end
 post '/selection' do
 	
-    session[:meatstype]= params[:meats]
- 	session[:cheesetype] = params[:cheese]
- 	session[:saucetype] = params[:sauce]
- 	session[:veggietype] = params[:veggies]
- 	session[:toptops] = params[:toppings]
- 	
-    puts'MADE IT TO POST SELECTION #{meats} #{cheese} #{sauce} #{veggies}' 	
-    
+    session[:meatstype]= params[:mv]
+ 	session[:cheesetype] = params[:cv]
+ 	session[:saucetype] = params[:sv]
+ 	session[:veggietype] = params[:vv]
 
     redirect'/results'
 end  
 get '/results' do
-	session[:toptops] = params[:toppings]	
+	
+erb :results, locals:{sv: session[:saucetype], mv: session[:meatstype], cv: session[:cheesetype], vv: session[:veggietype]}
 end
