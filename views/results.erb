@@ -11,7 +11,20 @@
 
 	
 	
-<p>Your order of a sandwich with <%=mv%>, <%=vv%>, <%=cv%>, <%=sv%> will be ready in just a few.</p>
+<p>Your order of a pizza with
+<%sv.each do |sauce|%>
+<%=sauce%>
+<%end%>
+<%mv.each do |meat|%>
+<%=meat%>
+<%end%>
+<%cv.each do |cheese|%>
+<%=cheese%>
+<%end%>
+<%vv.each do |vegg|%>
+<%=vegg%>
+<%end%>
+ will be ready in just a few.</p>
 
 	
 	

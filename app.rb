@@ -15,18 +15,18 @@ end
  	
 get '/selection' do
 	erb :selection, locals: {meats: session[:meatstype], cheese: session[:cheesetype], sauce: session[:saucetype], veggies: session[:veggietype]} 	
-	# puts "meats = #{meats}, cheese = #{cheese} sauce = #{sauce} veggies = #{veggies}"
+
 end
 post '/selection' do
 	
-    session[:meatstype]= params[:mv]
- 	session[:cheesetype] = params[:cv]
- 	session[:saucetype] = params[:sv]
- 	session[:veggietype] = params[:vv]
+    session[:meatsy]= params[:meat_radio]
+ 	session[:cheesety] = params[:cheese_radio]
+ 	session[:saucety] = params[:sauce_radio]
+ 	session[:veggetty] = params[:veg_radio]
 
     redirect'/results'
 end  
 get '/results' do
 	
-erb :results, locals:{sv: session[:saucetype], mv: session[:meatstype], cv: session[:cheesetype], vv: session[:veggietype]}
+erb :results, locals: {sv: session[:saucety], mv: session[:meatsy], cv: session[:cheesety], vv: session[:veggetty]}
 end
