@@ -11,30 +11,25 @@ post '/index' do
  	session[:saucetype] = params[:sauce]
  	session[:veggietype] = params[:veggies]
  	redirect '/selection' 
- puts" POST INDEX #{meats} #{cheese} #{sauce} #{veggies}"
 end
  	
 get '/selection' do
-	
-puts " GET SELECTION #{meats} #{cheese} #{sauce} #{veggies}"
-  	erb :selection, locals:{cheese: session[:cheesetype], meats:session[:meatstype], sauce: sessions[:saucetype], veggies: sessions[:veggies]}
+	erb :selection, locals: {meats: session[:meatstype], cheese: session[:cheesetype], sauce: session[:saucetype], veggies: session[:veggietype]} 	
+	# puts "meats = #{meats}, cheese = #{cheese} sauce = #{sauce} veggies = #{veggies}"
 end
-
-
 post '/selection' do
-	puts'MADE IT TO POST SELECTION'
-  	meats = params[:meats]
- 	cheese = params[:cheese]
- 	sauce = params[:sauce]
- 	veggies = params[:veggies]
- 	puts "meats = #{meats}, cheese = #{cheese} sauce = #{sauce} veggies = #{veggies}"
-    # toppings = params[:toppings]
-    # redirect'/results'
-end  
-# get '/results' do
-#  	toppings = params[:toppings].split(',')
-# 	erb :results, :locals=>{  toppings: toppings}
-# end	
-
-
 	
+    session[:meatstype]= params[:meats]
+ 	session[:cheesetype] = params[:cheese]
+ 	session[:saucetype] = params[:sauce]
+ 	session[:veggietype] = params[:veggies]
+ 	session[:toptops] = params[:toppings]
+ 	
+    puts'MADE IT TO POST SELECTION #{meats} #{cheese} #{sauce} #{veggies}' 	
+    
+
+    redirect'/results'
+end  
+get '/results' do
+	session[:toptops] = params[:toppings]	
+end
