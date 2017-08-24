@@ -11,31 +11,31 @@
 
 
 <form method = "post" action = "/selection">
-<% meats.each do |mv| %>
+<p><% meats.each do |mv| %>
 <%=mv%>
 <img src="./img/<%=mv%>.jpg">
-	<input type = "radio" value = "<%=mv%>" name = "confirmed[<%=mv%>]"> Yes
-    <input type = "radio" value = "no" name = "confirmed[<%=mv%>]"> No </p>
-<%end%>
-<% cheese.each do |cv| %>
+    <input type = "radio" value = "<%=mv%>" name = "confirmed[<%=mv%>]"> Yes
+    <input type = "radio" value = "no0" name = "no0"> No </p></select>
+<%end%></p>
+<p><% cheese.each do |cv| %>
 <%=cv%>
 <img src="./img/<%=cv%>.jpg">
 	<input type = "radio" value = "<%=cv%>" name = "confirmed[<%=cv%>]" > Yes
-    <input type = "radio" value ="no" name = "no" > No </p>
-<%end%>
-<% veggies.each do |vv| %>
+    <input type = "radio" value ="no1" name = "no1" > No </p>
+<%end%></p>
+<p><% veggies.each do |vv| %>
 <%=vv%>
 <img src="./img/<%=vv%>.jpg">
 	<input type = "radio" value = "<%=vv%>" name = "confirmed[<%=vv%>]" > Yes
-    <input type = "radio" value = "no" name = "no"> No </p>
-<%end%>
+    <input type = "radio" value = "no2" name = "no2"> No </p>
+<%end%></p>
 
-<% sauce.each do |sv|%>
+<p><% sauce.each do |sv|%>
 <%=sv%>
 <img src="./img/<%=sv%>.jpg">
 	<input type = "radio" value = "<%=sv%>" name = "confirmed[<%=sv%>]"> Yes
-    <input type = "radio" value = "no" name = "no"> No </p>
-<%end%>
+    <input type = "radio" value = "no3" name = "no3"> No </p>
+<%end%></p>
 <input type="submit" value="confirm" name="confirm">
 </form>
 </center>

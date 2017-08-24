@@ -11,14 +11,16 @@
 
 	
 	
-<p>Your order of a pizza with
-these toppings:</p>
-<%confirmed.each do |value|%>
-<%=value.shift%><img src="./img/<%=value.shift%>.jpg">
-<%end%>
+Your order of a pizza with
+these toppings:
+<p><%confirmed.each do |value|%>
+<%value = value.shift%>
+<%=value%><img src="./img/<%=value%>.jpg">
+
+<%end%></p>
 
 
- will be ready in just a few.</p>
+ will be ready in just a few.
 
 	
 	
