@@ -12,18 +12,12 @@
 	
 	
 <p>Your order of a pizza with
-<%sv.each do |sauce|%>
-<%=sauce%>
+these toppings:</p>
+<%confirmed.each do |value|%>
+<%=value.shift%><img src="./img/<%=value.shift%>.jpg">
 <%end%>
-<%mv.each do |meat|%>
-<%=meat%>
-<%end%>
-<%cv.each do |cheese|%>
-<%=cheese%>
-<%end%>
-<%vv.each do |vegg|%>
-<%=vegg%>
-<%end%>
+
+
  will be ready in just a few.</p>
 
 	

@@ -18,15 +18,15 @@ get '/selection' do
 
 end
 post '/selection' do
-	
-    session[:meatsy]= params[:meat_radio]
- 	session[:cheesety] = params[:cheese_radio]
- 	session[:saucety] = params[:sauce_radio]
- 	session[:veggetty] = params[:veg_radio]
+	session[:confirmed] = params[:confirmed]
+  #   session[:meatsy]= params[:meat_radio]
+ 	# session[:cheesety] = params[:cheese_radio]
+ 	# session[:saucety] = params[:sauce_radio]
+ 	# session[:veggetty] = params[:veg_radio]
 
     redirect'/results'
 end  
 get '/results' do
 	
-erb :results, locals: {sv: session[:saucety], mv: session[:meatsy], cv: session[:cheesety], vv: session[:veggetty]}
+erb :results, locals: {confirmed: session[:confirmed]}
 end
