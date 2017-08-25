@@ -1,5 +1,5 @@
 <!DOCtype html>
-
+<link rel="stylesheet" href="css/style.css">
 <html>
 <center>
 <header>
@@ -7,24 +7,29 @@
 </header>
 
 <body>
-<form method= "post" action = "/results">
+
 
 	
 	
-Your order of a pizza with
-these toppings:
-<p><%confirmed.each do |value|%>
-<%value = value.shift%>
+
+<p><%=lastname%>, your order of a pizza with
+these toppings:</p>
+<% puts "this is confirmed" %>
+<% p confirmed %>
+<p><%confirmed.each do |value, key|%>
+<% if key == value %>
 <%=value%><img src="./img/<%=value%>.jpg">
-
 <%end%></p>
+<%end%>
 
 
  will be ready in just a few.
+<p>Your deilvery option is  <%=delivery%></p>
+<p><%=street%></p>
+<p><%=city%>
+	
+	
 
-	
-	
-</form>
 
 
 </center>

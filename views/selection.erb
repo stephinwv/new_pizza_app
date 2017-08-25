@@ -1,5 +1,5 @@
 <!DOCtype HTML>
-
+<link rel="stylesheet" href="css/style.css">
 <center>
  <header>
     <h1> Here is your order for confirmation </h1>
@@ -15,29 +15,41 @@
 <%=mv%>
 <img src="./img/<%=mv%>.jpg">
     <input type = "radio" value = "<%=mv%>" name = "confirmed[<%=mv%>]"> Yes
-    <input type = "radio" value = "no0" name = "no0"> No </p></select>
+    <input type = "radio" value = "no" name = "confirmed[<%=mv%>]"> No </p></select>
 <%end%></p>
 <p><% cheese.each do |cv| %>
 <%=cv%>
 <img src="./img/<%=cv%>.jpg">
 	<input type = "radio" value = "<%=cv%>" name = "confirmed[<%=cv%>]" > Yes
-    <input type = "radio" value ="no1" name = "no1" > No </p>
+    <input type = "radio" value ="no" name = "confirmed[<%=cv%>]" > No </p>
 <%end%></p>
 <p><% veggies.each do |vv| %>
 <%=vv%>
 <img src="./img/<%=vv%>.jpg">
 	<input type = "radio" value = "<%=vv%>" name = "confirmed[<%=vv%>]" > Yes
-    <input type = "radio" value = "no2" name = "no2"> No </p>
+    <input type = "radio" value = "no" name = "confirmed[<%=vv%>]"> No </p>
 <%end%></p>
 
 <p><% sauce.each do |sv|%>
 <%=sv%>
 <img src="./img/<%=sv%>.jpg">
 	<input type = "radio" value = "<%=sv%>" name = "confirmed[<%=sv%>]"> Yes
-    <input type = "radio" value = "no3" name = "no3"> No </p>
+    <input type = "radio" value = "no" name = "confirmed[<%=sv%>]"> No </p>
 <%end%></p>
-<input type="submit" value="confirm" name="confirm">
-</form>
+
+
+    <strong>Delivery</strong><br>
+    <input type="radio" name= "delivery" value ="delivery" checked>Delivery<br>
+    <input type="radio" name= "delivery" value="pickup">Pickup<br>
+    <input type="radio" name = "delivery" value="dinein">Dine-in<br>
+<br>
+<strong>Name on the order</strong><br>
+    <input type="text" placeholder="Last name" name="lastname" required><br>
+<strong>If delivery please enter address to be delivered to.</strong><br>
+    <input type="text" placeholder="Address" name="street"><br>
+    <input type="text" placeholder="City" name="city"><br>
+    <input type="submit" value="Place Order">
+</form>  
 </center>
 </body>
 

@@ -14,19 +14,23 @@ post '/index' do
 end
  	
 get '/selection' do
-	erb :selection, locals: {meats: session[:meatstype], cheese: session[:cheesetype], sauce: session[:saucetype], veggies: session[:veggietype]} 	
+	confirmed = params[:confirmed]
+	erb :selection, locals: {meats: session[:meatstype], cheese: session[:cheesetype], sauce: session[:saucetype], veggies: session[:veggietype], confirmed:confirmed} 	
 
 end
 post '/selection' do
 	session[:confirmed] = params[:confirmed]
-  #   session[:meatsy]= params[:meat_radio]
- 	# session[:cheesety] = params[:cheese_radio]
- 	# session[:saucety] = params[:sauce_radio]
- 	# session[:veggetty] = params[:veg_radio]
-
+	puts "THIS IS CONFIRMED"
+	puts session[:confirmed]
+	session[:lastname] = params[:lastname]
+	session[:delivery] = params[:delivery]
+	session[:street] = params[:street]
+	session[:city] = params[:city]
+	puts " #{session[:confirmed] }"
     redirect'/results'
 end  
 get '/results' do
+
 	
-erb :results, locals: {confirmed: session[:confirmed]}
+erb :results, locals: {confirmed: session[:confirmed], delivery: session[:delivery], lastname:session[:lastname], street:session[:street], city: session[:city]}
 end
