@@ -9,6 +9,8 @@
 
 <body>
 
+<div class="container">
+
 
 <form method = "post" action = "/selection">
 <p><% meats.each do |mv| %>
@@ -36,7 +38,7 @@
 	<input type = "radio" value = "<%=sv%>" name = "confirmed[<%=sv%>]"> Yes
     <input type = "radio" value = "no" name = "confirmed[<%=sv%>]"> No </p>
 <%end%></p>
-
+</div>
 
     <strong>Delivery</strong><br>
     <input type="radio" name= "delivery" value ="delivery" checked>Delivery<br>
