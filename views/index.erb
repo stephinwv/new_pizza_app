@@ -5,33 +5,48 @@
 <p> Are you ready to create your custom pizza?</p></header>
 </center>
 <center>
-<h3> Please select your meats:</h3>
 <div class="container">
-
-
 <form method="post" action='/index'>
+<h3>Please select your pizza size</h3>
+  <p><input type="radio" name="size[]" value="personal">Personal 10" $4<img source= "./img/personal.jpg"></p>
+  <p><input type="radio" name= "size[]" value='small-12"'>Small 12" $5<img src="./img/small.jpg"></p>
+  <p><input type="radio" name= "size[]" value='medium-14"'>Medium 14" $6<img src="./img/medium.jpg"></p>
+  <p><input type="radio" name= "size[]" value='large-16"'>Large 16" $7<img src="./img/large.jpg"></p>
+  <p><input type="radio" name= "size[]" value='ex-large-18"'>Ex-large 18" $8<img src="./img/exlarge.jpg"></p>
+<h3>Please select your crust type:</h3>
+
+  <p><input type="radio" name="crust[]" value="thin">Thin Crust</p>
+  <p><input type="radio" name="crust[]" value= "cheese-stuffed">Cheese Stuffed Crust</p>
+  <p><input type="radio" name="crust[]" value="thick">Thick</p>
+  <p><input type="radio" name="crust[]" value="whole-wheat">Whole wheat</p>
+ <h3> Please select your Sauce:</h3> 
+
+  <p><input  type="radio"  name="sauce[]" value = "marinara"><img src = "./img/marinara.jpg">
+  <input  type="radio"  name="sauce[]" value = "zesty"><img src = "./img/zesty.jpg"> 
+  <input  type="radio"  name="sauce[]" value = "alfredo"><img src = "./img/alfredo.jpg"></p>
+<h2>$1 for each topping selected</h2>
+<h3> Please select your meats:</h3>
+
+
+
   <p>	<input  type="checkbox"  name = "meats[]" value = "ham"><img src = "./img/ham.jpg">
-  	<input  type="checkbox"  name = "meats[]" value = "anchovies"><img src = "./img/anchovies.jpg">
-  	<input  type="checkbox"  name = "meats[]" value = "salami"><img src = "./img/salami.jpg">
-  	<input  type="checkbox"  name = "meats[]" value = "pepperoni"><img src = "./img/pepperoni.jpg"></p>
+  <input  type="checkbox"  name = "meats[]" value = "anchovies"><img src = "./img/anchovies.jpg">
+  <input  type="checkbox"  name = "meats[]" value = "salami"><img src = "./img/salami.jpg">
+  <input  type="checkbox"  name = "meats[]" value = "pepperoni"><img src = "./img/pepperoni.jpg"></p>
 
 <h3> Please select your Veggies:</h3>
 
-	  <p><input  type="checkbox"  name="veggies[]" value = "peppers"><img src = "./img/peppers.jpg" >
-  	<input  type="checkbox"  name="veggies[]" value = "mushroom1"><img src = "./img/mushroom1.jpg" >
-  	<input  type="checkbox"  name="veggies[]" value = "red-onions"><img src = "./img/red-onions.jpg" >
+	<p><input  type="checkbox"  name="veggies[]" value = "peppers"><img src = "./img/peppers.jpg" >
+  <input  type="checkbox"  name="veggies[]" value = "mushroom1"><img src = "./img/mushroom1.jpg" >
+  <input  type="checkbox"  name="veggies[]" value = "red-onions"><img src = "./img/red-onions.jpg" >
   	<input  type="checkbox"  name="veggies[]" value = "black_olives1"><img src = "./img/black_olives1.jpg" ></p>
 
 <h3> Please select your Cheese:</h3>
 
-  	<p><input  type="checkbox"  name="cheese[]" value = "mozzerella"><img src = "./img/mozzerella.jpg" >
-  	<input  type="checkbox"  name="cheese[]" value = "provolone"><img src = "./img/provolone.jpg" >
-  	<input  type="checkbox"  name="cheese[]" value = "parmesan"><img src = "./img/parmesan.jpg"  ></p>
- <h3> Please select your Sauce:</h3> 
+  <p><input  type="checkbox"  name="cheese[]" value = "mozzerella"><img src = "./img/mozzerella.jpg" >
+  <input  type="checkbox"  name="cheese[]" value = "provolone"><img src = "./img/provolone.jpg" >
+  <input  type="checkbox"  name="cheese[]" value = "parmesan"><img src = "./img/parmesan.jpg"  ></p>
 
-  	<p><input  type="checkbox"  name="sauce[]" value = "marinara"><img src = "./img/marinara.jpg">
-  	<input  type="checkbox"  name="sauce[]" value = "zesty"><img src = "./img/zesty.jpg" > 
-  	<input  type="checkbox"  name="sauce[]" value = "alfredo"><img src = "./img/alfredo.jpg" ></p>
 </div>
 </center>
 <center><input type='submit'></center>

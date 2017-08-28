@@ -3,16 +3,32 @@
 <center>
  <header>
     <h1> Here is your order for confirmation </h1>
-    <h3> Pizza with these toppings:</h3>
-    
- </header>
-
+</header>
 <body>
-
-<div class="container">
-
-
 <form method = "post" action = "/selection">
+<div class="container">    
+Size: <br>
+    <%size.each do |szv|%>
+   <p> <%=szv%>
+   <img src="./img/<%=szv%>.jpg">
+    <input type = "radio" name = "confirmed[<%=szv%>]" value = "<%=szv%>"> Yes
+    <input type = "radio" name = "confirmed[<%=szv%>]" value = "no"> No </p>
+<%end%>
+Crust: <br>
+    <%crust.each do |crv|%>
+    <p> <%=crust%> 
+    <img src="./img/<%=crv%>.jpg">
+    <input type = "radio" name = "confirmed[<%=crv%>]" value = "<%=crv%>"> Yes
+    <input type = "radio" name = "confirmed[<%=crv%>]" value = "no"> No </p>
+    <%end%>
+ Sauce: <br>
+    <%sauce.each do |sv|%>
+    <%=sv%> 
+    <img src = "./img/<%=sv%>.jpg"> <p> 
+    <input type = "radio" name = "confirmed[<%=sv%>]" value = "<%=sv%>"> Yes
+    <input type = "radio" name = "confirmed[<%=sv%>]" value = "no"> No </p>
+    <%end%>   
+
 <p><% meats.each do |mv| %>
 <%=mv%>
 <img src="./img/<%=mv%>.jpg">
@@ -32,12 +48,7 @@
     <input type = "radio" value = "no" name = "confirmed[<%=vv%>]"> No </p>
 <%end%></p>
 
-<p><% sauce.each do |sv|%>
-<%=sv%>
-<img src="./img/<%=sv%>.jpg">
-	<input type = "radio" value = "<%=sv%>" name = "confirmed[<%=sv%>]"> Yes
-    <input type = "radio" value = "no" name = "confirmed[<%=sv%>]"> No </p>
-<%end%></p>
+
 </div>
 
     <strong>Delivery</strong><br>

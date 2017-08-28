@@ -13,19 +13,22 @@
 	
 <div class="container">
 
-
 <p><strong>The order with the last name of <%=lastname%>,</p>
-<p> of a pizza with
-these toppings:</p></strong>
+<p> with these options:</p></strong>
 
 <p><%confirmed.each do |value, key|%>
-<% if key == value %>
+
 <%=value%><img src="./img/<%=value%>.jpg">
 <%end%></p>
-<%end%>
+<form method="post" action="/results">
+	<p>Would you like to build another pizza?</p>
+	<input type = "submit" name = "build" value = "build">
+    
+	
+</form>
 
 </div>
- <strong>will be ready in just a few.
+ <strong>
 <p>Your deilvery option is  <%=delivery%></p>
 <p><%=street%></p>
 <p><%=city%></p>
