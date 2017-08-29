@@ -15,11 +15,37 @@
 
 <p><strong>The order with the last name of <%=lastname%>,</p>
 <p> with these options:</p></strong>
-
+<%total = 0%>
 <p><%confirmed.each do |value, key|%>
 
 <%=value%><img src="./img/<%=value%>.jpg">
+<% if value == "personal"
+        
+         total += 4
+        
+        elsif value =="small"
+            
+            total += 5
+        
+        elsif value == "medium"
+             
+              total += 6
+        
+        elsif value == "large"
+            
+             total += 7
+
+        elsif value =="exlarge" 
+            total += 8   
+       	else
+       		total +=1
+  end%>
+
+
+		
+	
 <%end%></p>
+ <p> Your total is:$<%=total%></p>	
 <form method="post" action="/results">
 	<p>Would you like to build another pizza?</p>
 	<input type = "submit" name = "build" value = "build">

@@ -7,27 +7,32 @@
 <center>
 <div class="container">
 <form method="post" action='/index'>
+<h3>How many pizza's would you like?</h3>
+  <p><input type="number" name="number">
+  
 <h3>Please select your pizza size</h3>
-  <p><input type="radio" name="size[]" value="personal">Personal 10" $4<img source= "./img/personal.jpg"></p>
-  <p><input type="radio" name= "size[]" value='small-12"'>Small 12" $5<img src="./img/small.jpg"></p>
-  <p><input type="radio" name= "size[]" value='medium-14"'>Medium 14" $6<img src="./img/medium.jpg"></p>
-  <p><input type="radio" name= "size[]" value='large-16"'>Large 16" $7<img src="./img/large.jpg"></p>
-  <p><input type="radio" name= "size[]" value='ex-large-18"'>Ex-large 18" $8<img src="./img/exlarge.jpg"></p>
+  <p><input type="radio" name="size[]" value= "personal">Personal 10" $4<img source= "./img/personal.jpg"></p>
+  <p><input type="radio" name= "size[]" value= 'small'>Small 12" $5<img src="./img/small.jpg"></p>
+  <p><input type="radio" name= "size[]" value= 'medium'>Medium 14" $6<img src="./img/medium.jpg"></p>
+  <p><input type="radio" name= "size[]" value= 'large'>Large 16" $7<img src="./img/large.jpg"></p>
+  <p><input type="radio" name= "size[]" value= 'exlarge'>Ex-large 18" $8<img src="./img/exlarge.jpg"></p>
+
 <h3>Please select your crust type:</h3>
 
-  <p><input type="radio" name="crust[]" value="thin">Thin Crust</p>
-  <p><input type="radio" name="crust[]" value= "cheese-stuffed">Cheese Stuffed Crust</p>
-  <p><input type="radio" name="crust[]" value="thick">Thick</p>
-  <p><input type="radio" name="crust[]" value="whole-wheat">Whole wheat</p>
+  <p><input type="radio" name="crust[]" value= "thin">Thin Crust</p><img src= "./img/thin.jpg">
+  <p><input type="radio" name="crust[]" value= "cheese-stuffed">Cheese Stuffed Crust</p><img src= "./img/stuffed.jpg">
+  <p><input type="radio" name="crust[]" value= "thick">Thick</p><img src= "./img/thick.jpg">
+  <p><input type="radio" name="crust[]" value= "whole-wheat">Whole wheat</p><img src= "./img/wheat.jpg">
+
  <h3> Please select your Sauce:</h3> 
 
-  <p><input  type="radio"  name="sauce[]" value = "marinara"><img src = "./img/marinara.jpg">
-  <input  type="radio"  name="sauce[]" value = "zesty"><img src = "./img/zesty.jpg"> 
-  <input  type="radio"  name="sauce[]" value = "alfredo"><img src = "./img/alfredo.jpg"></p>
+  <p><input  type="radio"  name= "sauce[]" value= "marinara"><img src = "./img/marinara.jpg">
+  <input  type="radio"  name= "sauce[]" value= "zesty"><img src = "./img/zesty.jpg"> 
+  <input  type="radio"  name= "sauce[]" value= "alfredo"><img src = "./img/alfredo.jpg"></p>
+<br>
 <h2>$1 for each topping selected</h2>
+
 <h3> Please select your meats:</h3>
-
-
 
   <p>	<input  type="checkbox"  name = "meats[]" value = "ham"><img src = "./img/ham.jpg">
   <input  type="checkbox"  name = "meats[]" value = "anchovies"><img src = "./img/anchovies.jpg">
